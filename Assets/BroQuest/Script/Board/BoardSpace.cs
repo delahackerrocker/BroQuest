@@ -32,8 +32,8 @@ public class BoardSpace : MonoBehaviour
         if (savedTileName == 0) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Hallway_00"));
         if (savedTileName == 1) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_00"));
         if (savedTileName == 2) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_E"));
-        if (savedTileName == 3) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_NE"));
-        if (savedTileName == 4) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_N"));
+        if (savedTileName == 3) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_N"));
+        if (savedTileName == 4) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_NE"));
         if (savedTileName == 5) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_NW"));
         if (savedTileName == 6) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_S"));
         if (savedTileName == 7) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_SE"));
