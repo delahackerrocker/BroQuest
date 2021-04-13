@@ -41,6 +41,6 @@ public class BoardSpace : MonoBehaviour
         if (savedTileName == 9) tile = (GameObject) Instantiate(Resources.Load("Prefabs/Tiles/Interior_W"));
         tile.transform.parent = this.transform;
         tile.transform.localPosition = new Vector3(0, 0, 0);
-        tile.transform.transform.Rotate(0.0f, 180f, 0f, Space.Self);
+        tile.transform.transform.Rotate(0.0f, 0f, 0f, Space.Self);
     }
 }
