@@ -44,11 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Ground
     uniqueID: 598108069
     locked: 0
-  - name: Pickups
+  - name: Walls
+    uniqueID: 3592600627
+    locked: 0
+  - name: Buildings
     uniqueID: 1278446217
+    locked: 0
+  - name: Decorations
+    uniqueID: 1511437797
     locked: 0
   - name: Enemy
     uniqueID: 1039680993

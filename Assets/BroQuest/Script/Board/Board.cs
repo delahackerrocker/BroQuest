@@ -6,6 +6,7 @@ using System.IO;
 
 public class Board : MonoBehaviour
 {
+    
     public GameObject boardSpace;
     public GameObject[] spaces;
 
