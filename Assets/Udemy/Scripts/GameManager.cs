@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using System.Linq;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviourPun
 {
     [Header("Players")]
     public string PlayerPrefabPath;
@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NetworkManager.instance.photonView.RPC("ImInGame", RpcTarget.All);
+        photonView.RPC("ImInGame", RpcTarget.All);
     }
 
     [PunRPC]
-    void ImInGame()
+    public void ImInGame()
     {
         playersInGame++;
         if (playersInGame == PhotonNetwork.PlayerList.Length)
