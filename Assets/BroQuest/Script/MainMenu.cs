@@ -136,18 +136,23 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         }
 
         roomInfoTXT.text = PhotonNetwork.CurrentRoom.Name;
+
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "MultiUserBoard");
+        }
     }
 
     public void OnStartGameBTN()
     {
         // Close the room
-        PhotonNetwork.CurrentRoom.IsOpen = false;
+        PhotonNetwork.CurrentRoom.IsOpen = true;
 
         // Hide the room
-        PhotonNetwork.CurrentRoom.IsVisible = false;
+        PhotonNetwork.CurrentRoom.IsVisible = true;
 
         // All players will start the game
-        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "Game");
+        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "MultiUserBoard");
     }
 
     public void OnLeaveLobbyBTN()
@@ -157,16 +162,8 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
     }
 
     // Lobby Browser Screen - TODO
-    void UpdateLobbyBrowserUI()
+    public void JoinRandomRoom()
     {
-        foreach (GameObject button in roomButtons)
-        {
-            button.SetActive(false);
-        }
-
-        for (int i = 0; i < roomButtons.Count; i++)
-        {
-
-        }
+        PhotonNetwork.JoinRandomRoom();
     }
 }
