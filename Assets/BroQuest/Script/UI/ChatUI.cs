@@ -14,6 +14,8 @@ public class ChatUI : MonoBehaviourPun
 
     public static ChatUI instance;
 
+    public string chatHistory = "";
+
     private void Awake()
     {
         instance = this;
@@ -32,6 +34,8 @@ public class ChatUI : MonoBehaviourPun
                 EventSystem.current.SetSelectedGameObject(chatInput.gameObject);
             }
         }
+
+        chatThread.text = chatHistory;
     }
 
     public void OnChatInputSend()
@@ -47,7 +51,7 @@ public class ChatUI : MonoBehaviourPun
     [PunRPC]
     void Thread(string playerName, string message)
     {
-        chatThread.text += string.Format("<b>{0}:</b> {1}\n", playerName, message);
+        chatHistory += string.Format("<b>{0}:</b> {1}\n", playerName, message);
         //chatThread.rectTransform.sizeDelta = new Vector2(chatThread.rectTransform.sizeDelta.x, chatThread.mesh.bounds.size.y+20);
     }
 }

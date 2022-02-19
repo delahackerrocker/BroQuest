@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BroQuest/Scenes/MultiUserBoard.unity
     guid: 2e5328f6008cef8468d0c7d4d8114056
+  - enabled: 1
+    path: Assets/BroQuest/Scenes/BoardFromCSV.unity
+    guid: 21041205660fd26439c4d047b1316fa3
   m_configObjects: {}

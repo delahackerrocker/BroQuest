@@ -46,7 +46,7 @@ public class Board : MonoBehaviour
 
     void CreateSavedSpace(int spaceCount, int currentRow, int currentColumn, int currentPrefab)
     {
-        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Prefabs/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
+        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Game/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
         spaces[spaceCount].name = currentRow+"_"+currentColumn;
         spaces[spaceCount].GetComponent<BoardSpace>().row = (Row) currentRow;
         spaces[spaceCount].GetComponent<BoardSpace>().column = (Column) currentColumn;
@@ -114,7 +114,7 @@ public class Board : MonoBehaviour
     }
     void CreateOriginalDataFile(int spaceCount, int currentRow, int currentColumn)
     {
-        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Prefabs/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
+        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Game/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
         spaces[spaceCount].transform.Rotate(0.0f, 90.0f, 90.0f, Space.Self);
         spaces[spaceCount].name = currentRow+"_"+currentColumn;
         spaces[spaceCount].GetComponent<BoardSpace>().row = (Row) currentRow;

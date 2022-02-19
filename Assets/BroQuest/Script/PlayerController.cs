@@ -30,8 +30,10 @@ public class PlayerController : MonoBehaviourPun
     public Animator weaponAnim;
     public PlayerInfo playerInfo;
 
-    // Locak Player
+    // Local Player
     public static PlayerController me;
+
+    private Camera playerCamera;
 
     [PunRPC]
     public void Initialize(Player player)
@@ -42,6 +44,9 @@ public class PlayerController : MonoBehaviourPun
         GameManager.instance.players[ID-1] = this;
 
         playerInfo.Initialize(player.NickName, maxHP);
+
+        GameObject[] findingCamera = GameObject.FindGameObjectsWithTag("Game_Camera");
+        playerCamera = findingCamera[0].GetComponent<Camera>();
 
         // initialize the health bar
         if (player.IsLocal)
@@ -88,15 +93,15 @@ public class PlayerController : MonoBehaviourPun
     }
     private void Attack()
     {
-        lastAttackTime = Time.time;
-        Vector3 dir = (Input.mousePosition - Camera.main.ScreenToWorldPoint(transform.position).normalized);
+        //lastAttackTime = Time.time;
+        //Vector3 dir = (Input.mousePosition - playerCamera.ScreenToWorldPoint(transform.position).normalized);
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + dir, dir, attackRange);
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position + dir, dir, attackRange);
 
-        if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
-        {
+        ///if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
+        //{
 
-        }
+        //}
 
         weaponAnim.SetTrigger("Attack");
     }

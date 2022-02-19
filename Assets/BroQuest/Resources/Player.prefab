@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6485078779404142742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CenterOfBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: 9127335215609374671}
   - component: {fileID: 9127335215609374668}
   - component: {fileID: 9127335215609374657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Game
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
+  m_SynchronizeRotation: 0
   m_SynchronizeScale: 1
   m_UseLocal: 1
 --- !u!212 &9127335215609374671
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9127335215723405542}
   - component: {fileID: 9127335215723405593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeaponContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9127335216010192405}
   - component: {fileID: 9127335216010192404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Club
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,6 +380,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9127335215609374670}
     m_Modifications:
+    - target: {fileID: 807228859246190909, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301191895708199300, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5653295323405398308, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -467,6 +475,14 @@ PrefabInstance:
     - target: {fileID: 7082969401699697254, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
       propertyPath: m_Name
       value: PlayerInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082969401699697254, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370670678878728807, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c584c150652f74aac7ccf9d9c900da, type: 3}

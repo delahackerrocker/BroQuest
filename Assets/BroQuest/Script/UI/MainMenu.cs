@@ -142,7 +142,34 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         PhotonNetwork.CurrentRoom.IsVisible = true;
 
         // All players will start the game
+        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "BoardFromCSV");
+        UI_Root.instance.GameUI();
+    }
+
+    public void OnChaosDemoBTN()
+    {
+        // Close the room
+        PhotonNetwork.CurrentRoom.IsOpen = true;
+
+        // Hide the room
+        PhotonNetwork.CurrentRoom.IsVisible = true;
+
+        // All players will start the game
         NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "MultiUserBoard");
+        UI_Root.instance.GameUI();
+    }
+
+    public void OnMapBTN()
+    {
+        // Close the room
+        PhotonNetwork.CurrentRoom.IsOpen = true;
+
+        // Hide the room
+        PhotonNetwork.CurrentRoom.IsVisible = true;
+
+        // All players will start the game
+        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "BoardFromCSV");
+        UI_Root.instance.GameUI();
     }
 
     public void OnLeaveLobbyBTN()
@@ -155,5 +182,10 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public void JoinRandomRoom()
     {
         PhotonNetwork.JoinRandomRoom();
+    }
+
+    public void OnChatBTN()
+    {
+        UI_Root.instance.ChatUI();
     }
 }

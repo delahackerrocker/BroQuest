@@ -43,7 +43,7 @@ public class BoardFromCSV : MonoBehaviour
 
     void CreateSavedSpace(int spaceCount, int currentRow, int currentColumn, string currentPrefab)
     {
-        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Prefabs/BoardSpace"), new Vector3((int)currentColumn, 0, -(int)currentRow), Quaternion.identity);
+        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Game/BoardSpace"), new Vector3((int)currentColumn, 0, -(int)currentRow), Quaternion.identity);
         spaces[spaceCount].name = currentRow+"_"+currentColumn;
         if (currentPrefab != null) spaces[spaceCount].GetComponent<BoardSpace>().savedTileName = int.Parse(currentPrefab);
         BuildData(""+spaceCount, ""+currentRow, ""+currentColumn, defaultPrefab);
@@ -106,7 +106,7 @@ public class BoardFromCSV : MonoBehaviour
     }
     void CreateOriginalDataFile(int spaceCount, int currentRow, int currentColumn)
     {
-        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Prefabs/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
+        spaces[spaceCount] = (GameObject) Instantiate(Resources.Load("Game/BoardSpace"), new Vector3((int)currentColumn, 0, (int)currentRow), Quaternion.identity);
         spaces[spaceCount].transform.Rotate(0.0f, 90.0f, 90.0f, Space.Self);
         spaces[spaceCount].name = currentRow+"_"+currentColumn;
         spaces[spaceCount].GetComponent<BoardSpace>().row = (Row) currentRow;
