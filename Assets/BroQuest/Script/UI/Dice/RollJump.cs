@@ -9,6 +9,9 @@ public class RollJump : MonoBehaviour
     //Set what button is pressed to make the dice jump.
     [SerializeField] KeyCode buttonToJump = KeyCode.Space;
     [SerializeField] float forceAmount = 400f;
+
+    private Vector3[] allDirections = { Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
+
     void Start()
     {
 
@@ -28,7 +31,8 @@ public class RollJump : MonoBehaviour
             {
                 diceGroup[i].transform.rotation = Random.rotation;
                 rb = diceGroup[i].GetComponent<Rigidbody>();
-                rb.AddForce(Vector3.up * forceAmount);
+                rb.AddForce(Vector3.up * forceAmount); 
+                rb.AddForce(allDirections[Random.Range(0, allDirections.Length)] * forceAmount);
                 rb.AddTorque(new Vector3(Random.value * forceAmount, Random.value * forceAmount, Random.value * forceAmount));
             }
         }

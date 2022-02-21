@@ -9,7 +9,11 @@ public class RollDrop : MonoBehaviour
     [SerializeField] List<GameObject> diceGroup = new List<GameObject>();
     //Height in which the dice will be picked up at. 
     [SerializeField] float pickUpHeight = 2;
+    [SerializeField] float forceAmount = 40f;
+
     Camera cam;
+
+    private Vector3[] allDirections = {Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +42,19 @@ public class RollDrop : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                    target = hit.point;
-                    print(hit.transform.position);
-                    target.y = pickUpHeight;
+                target = hit.point;
+                print(hit.transform.position);
+                target.y = pickUpHeight;
             }
+
+            Rigidbody rb;
             for (int i = 0; i < diceGroup.Count; i++)
             {
-               diceGroup[i].transform.LookAt(target);
-               diceGroup[i].GetComponent<Rigidbody>().velocity = diceGroup[i].transform.forward * speed;
+                diceGroup[i].transform.LookAt(target);
+                rb = diceGroup[i].GetComponent<Rigidbody>();
+                rb.velocity = diceGroup[i].transform.forward * speed;
+                rb.AddForce(allDirections[Random.Range(0,allDirections.Length)] * forceAmount);
+                rb.AddTorque(new Vector3(Random.value * forceAmount, Random.value * forceAmount, Random.value * forceAmount));
             }
         }
     }
