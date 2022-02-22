@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44980174, g: 0.49704605, b: 0.5604589, a: 1}
+  m_IndirectSpecularColor: {r: 0.45065194, g: 0.50061685, b: 0.5749539, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 592219820098637940, guid: 283ac7140714235469f99c19465355f6, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 868762832491892477, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: m_Name
       value: DiceArena3D
