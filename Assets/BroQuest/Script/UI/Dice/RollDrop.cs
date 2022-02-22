@@ -18,7 +18,7 @@ public class RollDrop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
+        cam = GameObject.FindGameObjectWithTag("Dice_Camera").GetComponent<Camera>() as Camera;
     }
     // Update is called once per frame
     void Update()
