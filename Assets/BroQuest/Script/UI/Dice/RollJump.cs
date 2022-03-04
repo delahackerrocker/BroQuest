@@ -12,12 +12,11 @@ public class RollJump : MonoBehaviour
 
     private Vector3[] allDirections = { Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
-    void Start()
+    public void SetDiceGroup(List<GameObject>  newDiceGroup)
     {
-
+        diceGroup = newDiceGroup;
     }
 
-    // Update is called once per frame
     void Update()
     {
         JumpBehavior();

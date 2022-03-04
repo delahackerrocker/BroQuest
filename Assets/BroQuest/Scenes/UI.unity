@@ -6225,17 +6225,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiceArena3D
       objectReference: {fileID: 0}
-    - target: {fileID: 868762832491892477, guid: 283ac7140714235469f99c19465355f6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6277675297428041336, guid: 283ac7140714235469f99c19465355f6, type: 3}
-      propertyPath: m_ClearFlags
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6277675297428041336, guid: 283ac7140714235469f99c19465355f6, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 128
+    - target: {fileID: 2919228425466626097, guid: 283ac7140714235469f99c19465355f6, type: 3}
+      propertyPath: sceneViewId
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7876075385330070367, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: m_RootOrder
@@ -6281,8 +6273,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7434869231278267260, guid: 283ac7140714235469f99c19465355f6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283ac7140714235469f99c19465355f6, type: 3}
 --- !u!1 &1804075817
 GameObject:

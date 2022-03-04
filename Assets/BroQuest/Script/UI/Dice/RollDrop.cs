@@ -15,12 +15,16 @@ public class RollDrop : MonoBehaviour
 
     private Vector3[] allDirections = {Vector3.down, Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
-    // Start is called before the first frame update
+    public void SetDiceGroup(List<GameObject> newDiceGroup)
+    {
+        diceGroup = newDiceGroup;
+    }
+
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("Dice_Camera").GetComponent<Camera>() as Camera;
     }
-    // Update is called once per frame
+    
     void Update()
     {
         PickupDropBehavior();
