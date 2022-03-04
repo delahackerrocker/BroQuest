@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class RollManager : MonoBehaviour
+public class RollManager : MonoBehaviourPunCallbacks, ILobbyCallbacks
 {
     public Camera diceCamera;
 
@@ -53,11 +55,6 @@ public class RollManager : MonoBehaviour
         playerRollDrop.SetDiceGroup(playerDiceGroup);
     }
 
-    void RemoveDiceFromGroup(GameObject gameObject)
-    {
-
-    }
-
     // See Order of Execution for Event Functions for information on FixedUpdate() and Update() related to physics queries
     void FixedUpdate()
     {
@@ -104,31 +101,64 @@ public class RollManager : MonoBehaviour
                     GameObject newDice = new GameObject();
 
                     Debug.Log("Did Hit Selection :: " + hit.collider.name);
-                    if (hit.collider.name == "D4")
+
+                    if (PhotonNetwork.IsMasterClient)
                     {
-                        newDice = Instantiate(playerD4, playerDiceSpawnPoint.transform.position, transform.rotation);
-                    } else if (hit.collider.name == "D6") 
-                    {
-                        newDice = Instantiate(playerD6, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        if (hit.collider.name == "D4")
+                        {
+                            newDice = Instantiate(zargonD4, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D6")
+                        {
+                            newDice = Instantiate(zargonD6, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D8")
+                        {
+                            newDice = Instantiate(zargonD8, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D10")
+                        {
+                            newDice = Instantiate(zargonD10, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D12")
+                        {
+                            newDice = Instantiate(zargonD12, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D20")
+                        {
+                            newDice = Instantiate(zargonD20, zargonDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        zargonDiceGroup.Add(newDice);
+                        UpdateDiceSets();
+                    } else {
+                        if (hit.collider.name == "D4")
+                        {
+                            newDice = Instantiate(playerD4, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D6")
+                        {
+                            newDice = Instantiate(playerD6, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D8")
+                        {
+                            newDice = Instantiate(playerD8, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D10")
+                        {
+                            newDice = Instantiate(playerD10, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D12")
+                        {
+                            newDice = Instantiate(playerD12, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        else if (hit.collider.name == "D20")
+                        {
+                            newDice = Instantiate(playerD20, playerDiceSpawnPoint.transform.position, transform.rotation);
+                        }
+                        playerDiceGroup.Add(newDice);
+                        UpdateDiceSets();
                     }
-                    else if (hit.collider.name == "D8")
-                    {
-                        newDice = Instantiate(playerD8, playerDiceSpawnPoint.transform.position, transform.rotation);
-                    }
-                    else if (hit.collider.name == "D10")
-                    {
-                        newDice = Instantiate(playerD10, playerDiceSpawnPoint.transform.position, transform.rotation);
-                    }
-                    else if (hit.collider.name == "D12")
-                    {
-                        newDice = Instantiate(playerD12, playerDiceSpawnPoint.transform.position, transform.rotation);
-                    }
-                    else if (hit.collider.name == "D20")
-                    {
-                        newDice = Instantiate(playerD20, playerDiceSpawnPoint.transform.position, transform.rotation);
-                    }
-                    playerDiceGroup.Add(newDice);
-                    UpdateDiceSets();
+
                 }
             }
             else

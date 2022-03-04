@@ -13,7 +13,7 @@ public class DiceHighlight : MonoBehaviour
 
     public int framesUntilDiceIsSet = 150;
     private int frameCounter = 0;
-    private int finalDiceRead = -1;
+    public int finalDiceRead = -1;
     private int lastDiceRead = -1;
 
     void Start()
