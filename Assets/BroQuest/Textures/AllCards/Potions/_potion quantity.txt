@@ -1,0 +1,5 @@
+Potion - 25 Cards in total
+
+Potion of healing = 4 copies
+all other potions = 1 copy
+

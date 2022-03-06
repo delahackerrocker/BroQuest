@@ -369,6 +369,7 @@ MonoBehaviour:
   - {fileID: 3947028492823704578}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!1 &198246326188506777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2134,7 @@ MonoBehaviour:
   - {fileID: 8144694344682180501}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!1 &1697826667785406120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,6 +5752,7 @@ MonoBehaviour:
   - {fileID: 4630760926075600}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!114 &2349790514770734421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6284,6 +6287,7 @@ MonoBehaviour:
   - {fileID: 1271900054215611997}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!1 &5432573148999084689
 GameObject:
   m_ObjectHideFlags: 0
@@ -6720,6 +6724,7 @@ MonoBehaviour:
   - {fileID: 335340362351872083}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!1 &5936179315763967301
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,7 +7389,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.8301887, g: 0.6980318, b: 0, a: 1}
+  m_Color: {r: 0.64939696, g: 0.83137256, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -7478,7 +7483,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.6792453, g: 0.48040858, b: 0.27233893, a: 1}
+  m_Color: {r: 0.6784314, g: 0.27058825, b: 0.5640009, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -8065,6 +8070,7 @@ MonoBehaviour:
   - {fileID: 3350588206742898336}
   isDiceSet: 0
   framesUntilDiceIsSet: 150
+  finalDiceRead: -1
 --- !u!1 &6840251577059854966
 GameObject:
   m_ObjectHideFlags: 0

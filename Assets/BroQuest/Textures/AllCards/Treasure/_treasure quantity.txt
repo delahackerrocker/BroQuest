@@ -1,0 +1,10 @@
+Treasure - 17 Cards in total
+
+1 	Artifact
+2 	Spell Scroll
+3 	Potion
+4	Equipment
+
+2 	Hazard
+1	Poison
+4 	Wandering Monster
