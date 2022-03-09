@@ -9,11 +9,19 @@ using Photon.Realtime;
 
 public class ZargonFeed : MonoBehaviourPun
 {
-    public TextMeshProUGUI feed;
-
     public static ZargonFeed instance;
 
+    public TextMeshProUGUI characterName;
+
     public string rollHistory = "";
+
+    [SerializeField] List<GameObject> diceGroup = new List<GameObject>();
+    [SerializeField] GameObject D4;
+    [SerializeField] GameObject D6;
+    [SerializeField] GameObject D8;
+    [SerializeField] GameObject D10;
+    [SerializeField] GameObject D12;
+    [SerializeField] GameObject D20;
 
     private void Awake()
     {
@@ -21,7 +29,7 @@ public class ZargonFeed : MonoBehaviourPun
     }
     void Update()
     {
-        feed.text = rollHistory;
+        ;
     }
 
     public void OnUpdateFeed(string newRoll)
@@ -36,6 +44,7 @@ public class ZargonFeed : MonoBehaviourPun
     [PunRPC]
     void ThreadZargon(string playerName, string message)
     {
+        characterName.text = playerName;
         rollHistory += string.Format("<b>{0}:</b> {1}\n", playerName, message);
     }
 }
