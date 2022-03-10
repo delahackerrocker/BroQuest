@@ -10,7 +10,7 @@ public class RollJump : MonoBehaviourPun
     [SerializeField] List<GameObject> diceGroup = new List<GameObject>();
     //Set what button is pressed to make the dice jump.
     [SerializeField] KeyCode buttonToJump = KeyCode.Space;
-    [SerializeField] float forceAmount = 400f;
+    [SerializeField] float forceAmount = 350f;
 
     private Vector3[] allDirections = { Vector3.left, Vector3.right, Vector3.forward, Vector3.back };
 
@@ -43,6 +43,7 @@ public class RollJump : MonoBehaviourPun
 
             if (PhotonNetwork.IsMasterClient)
             {
+                ZargonFeed.instance.ZargonClear();
                 Invoke("UpdateZargonFeed", 5f);
             } else
             {
@@ -53,30 +54,34 @@ public class RollJump : MonoBehaviourPun
 
     void UpdateZargonFeed()
     {
-        string newRoll = "";
+        string[,] newRolls = new string[diceGroup.Count, 2];
 
         for (int i = 0; i < diceGroup.Count; i++)
         {
-            newRoll += "D?:" + diceGroup[i].GetComponent<DiceHighlight>().finalDiceRead+", ";
+            newRolls[i,0] += diceGroup[i].GetComponent<DiceHighlight>().sides.Length;
+            newRolls[i,1] += diceGroup[i].GetComponent<DiceHighlight>().finalDiceRead + "";
         }
 
-        ZargonFeed.instance.OnUpdateFeed(newRoll);
+        ZargonFeed.instance.OnUpdateFeed(newRolls);
 
         isUnlocked = true;
     }
 
     void UpdatePlayerFeed()
     {
-        string newRoll = "";
+        /*
+        string[,] newRolls = new string[diceGroup.Count, 2];
 
         for (int i = 0; i < diceGroup.Count; i++)
         {
-            newRoll += "D?:" + diceGroup[i].GetComponent<DiceHighlight>().finalDiceRead + ", ";
+            newRolls[i, 0] += "UI/Dice/Dice_D" + diceGroup[i].GetComponent<DiceHighlight>().sides.Length;
+            newRolls[i, 1] += diceGroup[i].GetComponent<DiceHighlight>().finalDiceRead + "";
         }
 
-        PlayerFeed.instance.OnUpdateFeed(newRoll);
+        PlayerFeed.instance.OnUpdateFeed(newRolls);
 
         isUnlocked = true;
+        */
     }
 }
    

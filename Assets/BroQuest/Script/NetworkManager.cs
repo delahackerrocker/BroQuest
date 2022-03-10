@@ -30,21 +30,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("You joined the master server.");
+       // Debug.Log("You joined the master server.");
         PhotonNetwork.JoinLobby();
     }
 
     public override void OnJoinedLobby()
     {
-        Debug.Log("You joined the lobby:");
+        //Debug.Log("You joined the lobby:");
     }
     public override void OnJoinedRoom()
     {
-        Debug.Log("You joined room "+PhotonNetwork.CurrentRoom.Name);
+        //Debug.Log("You joined room "+PhotonNetwork.CurrentRoom.Name);
     }
     public override void OnCreatedRoom()
     {
-        Debug.Log("You created a room.");
+        //Debug.Log("You created a room.");
     }
 
     public void CreateRoom(string roomName)

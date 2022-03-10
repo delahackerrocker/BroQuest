@@ -60,8 +60,6 @@ public class RollManager : MonoBehaviourPunCallbacks, ILobbyCallbacks
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Input.GetMouseButtonDown(0) == true");
-
             // Bit shift the index of the layer (8) to get a bit mask
             int layerMask = 7;
 

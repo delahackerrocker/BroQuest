@@ -13,38 +13,49 @@ public class ZargonFeed : MonoBehaviourPun
 
     public TextMeshProUGUI characterName;
 
-    public string rollHistory = "";
+    public GameObject diceContainer;
 
     [SerializeField] List<GameObject> diceGroup = new List<GameObject>();
-    [SerializeField] GameObject D4;
-    [SerializeField] GameObject D6;
-    [SerializeField] GameObject D8;
-    [SerializeField] GameObject D10;
-    [SerializeField] GameObject D12;
-    [SerializeField] GameObject D20;
 
     private void Awake()
     {
         instance = this;
     }
-    void Update()
+    void Start()
     {
-        ;
+        ZargonClear();
     }
 
-    public void OnUpdateFeed(string newRoll)
+    public void OnUpdateFeed(string[,] newRolls)
     {
-        if (newRoll.Length > 0)
+        if (newRolls.Length > 0)
         {
-            photonView.RPC("ThreadZargon", RpcTarget.All, PhotonNetwork.LocalPlayer.NickName, newRoll);
+            Debug.Log("newRolls.Length:"+newRolls.Length/2);
+            int diceCount = newRolls.Length/2;
+            for (int i = 0; i < diceCount; i++)
+            {
+                Debug.Log("newRolls[i, 0]:" + newRolls[i, 0]);
+                Debug.Log("newRolls[i, 1]:" + newRolls[i, 1]);
+                LocalDiceDisplay(PhotonNetwork.LocalPlayer.NickName, i, newRolls[i, 0], newRolls[i, 1]);
+            }
         }
         EventSystem.current.SetSelectedGameObject(null);
     }
 
-    [PunRPC]
-    void ThreadZargon(string playerName, string message)
+    public void ZargonClear()
     {
-        characterName.text = playerName;
-        rollHistory += string.Format("<b>{0}:</b> {1}\n", playerName, message);
+        for (int i = 0; i < diceGroup.Count; i++)
+        {
+            diceGroup[i].GetComponent<DiceFinal>().SetNone();
+        }
     }
+
+    void LocalDiceDisplay(string playerName, int diceID, string newRollType, string newRollValue)
+    {
+        diceGroup[diceID].gameObject.SetActive(true);
+        diceGroup[diceID].GetComponent<DiceFinal>().SetFinal(newRollType, newRollValue);
+    }
+
+        // copypasta for global roll history tab
+        // rollHistory += string.Format("<b>{0}:</b> {1}\n", playerName, newRoll);
 }
