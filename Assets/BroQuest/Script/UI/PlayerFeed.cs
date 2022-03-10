@@ -23,7 +23,7 @@ public class PlayerFeed : MonoBehaviourPun
     }
     void Start()
     {
-        ThreadPlayerClear();
+        ThreadPlayerClear(PhotonNetwork.NickName);
     }
 
     public void OnUpdateFeed(string[,] newRolls)
@@ -47,11 +47,12 @@ public class PlayerFeed : MonoBehaviourPun
 
     public void PlayerClear()
     {
-        photonView.RPC("ThreadPlayerClear", RpcTarget.All);
+        photonView.RPC("ThreadPlayerClear", RpcTarget.All, PhotonNetwork.NickName);
     }
     [PunRPC]
-    void ThreadPlayerClear()
+    void ThreadPlayerClear(string characterName)
     {
+        this.characterName.text = characterName;
         for (int i = 0; i < diceGroup.Count; i++)
         {
             diceGroup[i].GetComponent<DiceFinal>().SetNone();

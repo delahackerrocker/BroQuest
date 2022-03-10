@@ -23,7 +23,7 @@ public class ZargonFeed : MonoBehaviourPun
     }
     void Start()
     {
-        ThreadZargonClear();
+        ThreadZargonClear(PhotonNetwork.NickName);
     }
 
     public void OnUpdateFeed(string[,] newRolls)
@@ -47,11 +47,12 @@ public class ZargonFeed : MonoBehaviourPun
 
     public void ZargonClear()
     {
-        photonView.RPC("ThreadZargonClear", RpcTarget.All);
+        photonView.RPC("ThreadZargonClear", RpcTarget.All, PhotonNetwork.NickName);
     }
     [PunRPC]
-    void ThreadZargonClear()
+    void ThreadZargonClear(string characterName)
     {
+        this.characterName.text = characterName;
         for (int i = 0; i < diceGroup.Count; i++)
         {
             diceGroup[i].GetComponent<DiceFinal>().SetNone();
