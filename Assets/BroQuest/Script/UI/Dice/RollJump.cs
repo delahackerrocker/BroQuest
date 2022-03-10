@@ -47,6 +47,7 @@ public class RollJump : MonoBehaviourPun
                 Invoke("UpdateZargonFeed", 5f);
             } else
             {
+                PlayerFeed.instance.PlayerClear();
                 Invoke("UpdatePlayerFeed", 5f);
             }
         }
@@ -69,19 +70,17 @@ public class RollJump : MonoBehaviourPun
 
     void UpdatePlayerFeed()
     {
-        /*
         string[,] newRolls = new string[diceGroup.Count, 2];
 
         for (int i = 0; i < diceGroup.Count; i++)
         {
-            newRolls[i, 0] += "UI/Dice/Dice_D" + diceGroup[i].GetComponent<DiceHighlight>().sides.Length;
+            newRolls[i, 0] += diceGroup[i].GetComponent<DiceHighlight>().sides.Length;
             newRolls[i, 1] += diceGroup[i].GetComponent<DiceHighlight>().finalDiceRead + "";
         }
 
         PlayerFeed.instance.OnUpdateFeed(newRolls);
 
         isUnlocked = true;
-        */
     }
 }
    
