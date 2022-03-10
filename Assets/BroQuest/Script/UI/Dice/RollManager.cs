@@ -98,7 +98,7 @@ public class RollManager : MonoBehaviourPunCallbacks, ILobbyCallbacks
                 {
                     GameObject newDice = new GameObject();
 
-                    Debug.Log("Did Hit Selection :: " + hit.collider.name);
+                    //Debug.Log("Did Hit Selection :: " + hit.collider.name);
 
                     if (PhotonNetwork.IsMasterClient)
                     {

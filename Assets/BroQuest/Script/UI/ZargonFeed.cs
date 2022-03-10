@@ -30,12 +30,12 @@ public class ZargonFeed : MonoBehaviourPun
     {
         if (newRolls.Length > 0)
         {
-            Debug.Log("newRolls.Length:"+newRolls.Length/2);
+            //Debug.Log("newRolls.Length:"+newRolls.Length/2);
             int diceCount = newRolls.Length/2;
             for (int i = 0; i < diceCount; i++)
             {
-                Debug.Log("newRolls[i, 0]:" + newRolls[i, 0]);
-                Debug.Log("newRolls[i, 1]:" + newRolls[i, 1]);
+                //Debug.Log("newRolls[i, 0]:" + newRolls[i, 0]);
+                //Debug.Log("newRolls[i, 1]:" + newRolls[i, 1]);
 
                 photonView.RPC("ThreadZargonDiceDisplay_"+i, RpcTarget.All, newRolls[i, 0], newRolls[i, 1]);
 

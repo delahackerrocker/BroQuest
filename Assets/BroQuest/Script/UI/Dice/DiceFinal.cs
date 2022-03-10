@@ -14,7 +14,7 @@ public class DiceFinal : MonoBehaviour
 
     public void SetFinal(string diceType, string finalRead)
     {
-        Debug.Log("SetFinal:" + finalRead);
+        //Debug.Log("SetFinal:" + finalRead);
         this.finalRead.text = finalRead;
         
         foreach (Image image in diceImages)
