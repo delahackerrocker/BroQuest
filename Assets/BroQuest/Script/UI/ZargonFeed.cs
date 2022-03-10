@@ -23,7 +23,7 @@ public class ZargonFeed : MonoBehaviourPun
     }
     void Start()
     {
-        ZargonClear();
+        ThreadZargonClear();
     }
 
     public void OnUpdateFeed(string[,] newRolls)
@@ -36,7 +36,10 @@ public class ZargonFeed : MonoBehaviourPun
             {
                 Debug.Log("newRolls[i, 0]:" + newRolls[i, 0]);
                 Debug.Log("newRolls[i, 1]:" + newRolls[i, 1]);
-                LocalDiceDisplay(PhotonNetwork.LocalPlayer.NickName, i, newRolls[i, 0], newRolls[i, 1]);
+
+                photonView.RPC("ThreadZargonDiceDisplay_"+i, RpcTarget.All, newRolls[i, 0], newRolls[i, 1]);
+
+                //UpdateDiceRollLog(PhotonNetwork.LocalPlayer.NickName, i, newRolls[i, 0], newRolls[i, 1]);
             }
         }
         EventSystem.current.SetSelectedGameObject(null);
@@ -44,18 +47,66 @@ public class ZargonFeed : MonoBehaviourPun
 
     public void ZargonClear()
     {
+        photonView.RPC("ThreadZargonClear", RpcTarget.All);
+    }
+    [PunRPC]
+    void ThreadZargonClear()
+    {
         for (int i = 0; i < diceGroup.Count; i++)
         {
             diceGroup[i].GetComponent<DiceFinal>().SetNone();
         }
     }
 
-    void LocalDiceDisplay(string playerName, int diceID, string newRollType, string newRollValue)
+    [PunRPC]
+    void ThreadZargonDiceDisplay_0(string rt = null, string rv = null)
     {
-        diceGroup[diceID].gameObject.SetActive(true);
-        diceGroup[diceID].GetComponent<DiceFinal>().SetFinal(newRollType, newRollValue);
+        diceGroup[0].gameObject.SetActive(true);
+        diceGroup[0].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_1(string rt = null, string rv = null)
+    {
+        diceGroup[1].gameObject.SetActive(true);
+        diceGroup[1].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_2(string rt = null, string rv = null)
+    {
+        diceGroup[2].gameObject.SetActive(true);
+        diceGroup[2].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_3(string rt = null, string rv = null)
+    {
+        diceGroup[3].gameObject.SetActive(true);
+        diceGroup[3].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_4(string rt = null, string rv = null)
+    {
+        diceGroup[4].gameObject.SetActive(true);
+        diceGroup[4].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_5(string rt = null, string rv = null)
+    {
+        diceGroup[5].gameObject.SetActive(true);
+        diceGroup[5].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_6(string rt = null, string rv = null)
+    {
+        diceGroup[6].gameObject.SetActive(true);
+        diceGroup[6].GetComponent<DiceFinal>().SetFinal(rt, rv);
+    }
+    [PunRPC]
+    void ThreadZargonDiceDisplay_7(string rt = null, string rv = null)
+    {
+        diceGroup[7].gameObject.SetActive(true);
+        diceGroup[7].GetComponent<DiceFinal>().SetFinal(rt, rv);
     }
 
-        // copypasta for global roll history tab
-        // rollHistory += string.Format("<b>{0}:</b> {1}\n", playerName, newRoll);
+    // copypasta for global roll history tab
+    // rollHistory += string.Format("<b>{0}:</b> {1}\n", playerName, newRoll);
 }

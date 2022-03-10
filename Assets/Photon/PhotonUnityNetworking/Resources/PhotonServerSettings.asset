@@ -53,6 +53,35 @@ MonoBehaviour:
   - ThreadZargon
   - ThreadZargonAddNewRoll
   - ThreadZargonClear
+  - OnUpdateFeed
+  - LocalDiceDisplay
+  - ZargonClear
+  - ThreadZargonDiceDisplay
+  - ThreadDiceDisplay_0
+  - ThreadDiceDisplay_1
+  - ThreadDiceDisplay_2
+  - ThreadDiceDisplay_3
+  - ThreadDiceDisplay_4
+  - ThreadDiceDisplay_5
+  - ThreadDiceDisplay_6
+  - ThreadDiceDisplay_7
+  - ThreadPlayerClear
+  - ThreadPlayerDiceDisplay_0
+  - ThreadPlayerDiceDisplay_1
+  - ThreadPlayerDiceDisplay_2
+  - ThreadPlayerDiceDisplay_3
+  - ThreadPlayerDiceDisplay_4
+  - ThreadPlayerDiceDisplay_5
+  - ThreadPlayerDiceDisplay_6
+  - ThreadPlayerDiceDisplay_7
+  - ThreadZargonDiceDisplay_0
+  - ThreadZargonDiceDisplay_1
+  - ThreadZargonDiceDisplay_2
+  - ThreadZargonDiceDisplay_3
+  - ThreadZargonDiceDisplay_4
+  - ThreadZargonDiceDisplay_5
+  - ThreadZargonDiceDisplay_6
+  - ThreadZargonDiceDisplay_7
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
