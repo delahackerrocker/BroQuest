@@ -115,7 +115,7 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
     [PunRPC]
     void UpdateLobbyUI()
     {
-        //startGameBTN.interactable = PhotonNetwork.IsMasterClient;
+        startGameBTN.interactable = true;
 
         playerListTXT.text = "";
 
