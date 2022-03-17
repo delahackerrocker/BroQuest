@@ -264,22 +264,16 @@ public class PlayerCharacter : MonoBehaviourPun
 
     public void NextHero()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            int nextMonster = selectedHero + 1;
-            if (nextMonster == heroes.Count - 1) nextMonster = 0;
-            ShowHero(nextMonster);
-        }
+        int nextMonster = selectedHero + 1;
+        if (nextMonster == heroes.Count - 1) nextMonster = 0;
+        ShowHero(nextMonster);
     }
 
     public void PreviousHero()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            int nextMonster = selectedHero - 1;
-            if (nextMonster < 0) nextMonster = heroes.Count - 1;
-            ShowHero(nextMonster);
-        }
+        int nextMonster = selectedHero - 1;
+        if (nextMonster < 0) nextMonster = heroes.Count - 1;
+        ShowHero(nextMonster);
     }
 
 
