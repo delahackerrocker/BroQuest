@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerFeedPanel: {fileID: 928502698}
   characterName: {fileID: 1548148749}
-  characterImage: {fileID: 0}
+  characterImage: {fileID: 1264089915}
   attackDice: {fileID: 1618502436}
   defendDice: {fileID: 1839529401}
   bodyPoints: {fileID: 1950430256}
@@ -10985,8 +10985,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122215879}
   m_HandleRect: {fileID: 122215878}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9999999
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
