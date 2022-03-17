@@ -11,7 +11,14 @@ public class PlayerFeed : MonoBehaviourPun
 {
     public static PlayerFeed instance;
 
+    public GameObject playerFeedPanel;
+
     public TextMeshProUGUI characterName;
+    public Image characterImage;
+    public TextMeshProUGUI attackDice;
+    public TextMeshProUGUI defendDice;
+    public TextMeshProUGUI bodyPoints;
+    public TextMeshProUGUI mindPoints;
 
     public GameObject diceContainer;
 
@@ -24,6 +31,22 @@ public class PlayerFeed : MonoBehaviourPun
     void Start()
     {
         ThreadPlayerClear(PhotonNetwork.NickName);
+    }
+
+    public bool panelIsOpen = true;
+    public void TogglePanel()
+    {
+        if (panelIsOpen)
+        {
+            panelIsOpen = false;
+            playerFeedPanel.transform.localPosition = new Vector3(1133f, 0f, 0f);
+        }
+        else
+        {
+            panelIsOpen = true;
+            playerFeedPanel.transform.localPosition = new Vector3(735f, 0f, 0f);
+        }
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void OnUpdateFeed(string[,] newRolls)
@@ -41,9 +64,27 @@ public class PlayerFeed : MonoBehaviourPun
 
                 //UpdateDiceRollLog(PhotonNetwork.LocalPlayer.NickName, i, newRolls[i, 0], newRolls[i, 1]);
             }
+            ShowPlayerCharacter();
         }
         EventSystem.current.SetSelectedGameObject(null);
     }
+
+    public void ShowPlayerCharacter()
+    {
+        Hero playChar = PlayerCharacter.instance.heroes[PlayerCharacter.instance.selectedHero];
+        photonView.RPC("ThreadShowPlayerCharacter", RpcTarget.All, PhotonNetwork.NickName, playChar.image, playChar.AttackDice, playChar.DefendDice, playChar.BodyPoints, playChar.MindPoints);
+    }
+
+    [PunRPC]
+    public void ThreadShowPlayerCharacter(string characterName, string characterimage, int attackDice, int defendDice, int bodyPoints, int mindPoints)
+    {
+        this.characterName.text = ""+characterName;
+        characterImage.sprite = Resources.Load<Sprite>("Heroes/" + characterimage);
+        this.attackDice.text = "" + attackDice;
+        this.defendDice.text = "" + defendDice;
+        this.bodyPoints.text = "" + bodyPoints;
+        this.mindPoints.text = "" + mindPoints;
+}
 
     public void PlayerClear()
     {

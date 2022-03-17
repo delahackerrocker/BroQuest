@@ -110,7 +110,6 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         UpdateLobbyUI();
     }
 
-
     // RPC Function allows you to make calls to other players who are not this client
     [PunRPC]
     void UpdateLobbyUI()
@@ -126,11 +125,6 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         }
 
         roomInfoTXT.text = PhotonNetwork.CurrentRoom.Name;
-
-        if (!PhotonNetwork.IsMasterClient)
-        {
-            NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "MultiUserBoard");
-        }
     }
 
     public void OnStartGameBTN()
@@ -142,33 +136,6 @@ public class MainMenu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         PhotonNetwork.CurrentRoom.IsVisible = true;
 
         // All players will start the game
-        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "BoardFromCSV");
-        UI_Root.instance.GameUI();
-    }
-
-    public void OnChaosDemoBTN()
-    {
-        // Close the room
-        PhotonNetwork.CurrentRoom.IsOpen = true;
-
-        // Hide the room
-        PhotonNetwork.CurrentRoom.IsVisible = true;
-
-        // All players will start the game
-        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "MultiUserBoard");
-        UI_Root.instance.GameUI();
-    }
-
-    public void OnMapBTN()
-    {
-        // Close the room
-        PhotonNetwork.CurrentRoom.IsOpen = true;
-
-        // Hide the room
-        PhotonNetwork.CurrentRoom.IsVisible = true;
-
-        // All players will start the game
-        NetworkManager.instance.photonView.RPC("ChangeScene", RpcTarget.All, "BoardFromCSV");
         UI_Root.instance.GameUI();
     }
 

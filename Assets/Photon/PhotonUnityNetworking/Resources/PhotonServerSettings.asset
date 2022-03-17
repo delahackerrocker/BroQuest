@@ -83,6 +83,7 @@ MonoBehaviour:
   - ThreadZargonDiceDisplay_6
   - ThreadZargonDiceDisplay_7
   - ThreadShowMonster
+  - ThreadShowPlayerCharacter
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

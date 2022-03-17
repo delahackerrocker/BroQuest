@@ -11,6 +11,8 @@ public class ZargonFeed : MonoBehaviourPun
 {
     public static ZargonFeed instance;
 
+    public GameObject zargonFeedPanel;
+
     public TextMeshProUGUI characterName;
     public Image characterImage;
     public TextMeshProUGUI description;
@@ -35,6 +37,22 @@ public class ZargonFeed : MonoBehaviourPun
     {
         ThreadZargonClear();
         SetupMonsterList();
+    }
+
+    public bool panelIsOpen = true;
+    public void TogglePanel()
+    {
+        if (panelIsOpen)
+        {
+            panelIsOpen = false;
+            zargonFeedPanel.transform.localPosition = new Vector3(-1137f, 0f, 0f);
+        }
+        else
+        {
+            panelIsOpen = true;
+            zargonFeedPanel.transform.localPosition = new Vector3(-735f, 0f, 0f);
+        }
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void SetupMonsterList()
@@ -71,7 +89,7 @@ public class ZargonFeed : MonoBehaviourPun
         monster.MindPoints = 3;
         monster.image = "ChampionOfSlaanesh";
         monster.name = "Champion of Slaanesh";
-        monster.description = "Demonic Claw: if cause damage to a figure, that figure can't move next turn.";
+        monster.description = "Demonic Claw: if causes damage to a figure, that figure can't move next turn.";
         this.monsters.Add(monster);
         // Champion of Tzeentch
         monster = new Monster();
@@ -113,8 +131,8 @@ public class ZargonFeed : MonoBehaviourPun
         monster.DefendDice = 3;
         monster.BodyPoints = 3;
         monster.MindPoints = 2;
-        monster.image = "ChaosMarauder ";
-        monster.name = "Chaos Marauder ";
+        monster.image = "ChaosMarauder";
+        monster.name = "Chaos Marauder";
         monster.description = "Rage: +1 attack die and +1 movement for each Body Point lost.";
         this.monsters.Add(monster);
         // Chaos Warlock
@@ -482,7 +500,7 @@ public class ZargonFeed : MonoBehaviourPun
         monster.description = "Death Grasp: reduce the movement of adjacent heroes in 1 space.";
         this.monsters.Add(monster);
 
-        ShowMonster(0);
+        ShowMonster(15);
     }
 
     public void ShowMonster(int monsterID)
