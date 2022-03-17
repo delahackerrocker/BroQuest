@@ -40,6 +40,150 @@ public class ZargonFeed : MonoBehaviourPun
     private void SetupMonsterList()
     {
         Monster monster;
+        // Champion of Khorne
+        monster = new Monster();
+        monster.MovementSquares = 7;
+        monster.AttackDice = 4;
+        monster.DefendDice = 4;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 2;
+        monster.image = "ChampionOfKhorne";
+        monster.name = "Champion of Khorne";
+        monster.description = "Dual Wield: may perform an extra attack instead of moving.";
+        this.monsters.Add(monster);
+        // Champion of Nurgle
+        monster = new Monster();
+        monster.MovementSquares = 6;
+        monster.AttackDice = 4;
+        monster.DefendDice = 6;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 2;
+        monster.image = "ChampionOfNurgle";
+        monster.name = "Champion of Nurgle";
+        monster.description = "Pestilence: when defeated, all adjacent heroes and mecenaries suffer 1 Body Point of damage.";
+        this.monsters.Add(monster);
+        // Champion of Slaanesh
+        monster = new Monster();
+        monster.MovementSquares = 8;
+        monster.AttackDice = 5;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 3;
+        monster.image = "ChampionOfSlaanesh";
+        monster.name = "Champion of Slaanesh";
+        monster.description = "Demonic Claw: if cause damage to a figure, that figure can't move next turn.";
+        this.monsters.Add(monster);
+        // Champion of Tzeentch
+        monster = new Monster();
+        monster.MovementSquares = 7;
+        monster.AttackDice = 4;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 5;
+        monster.image = "ChampionOfTzeentch";
+        monster.name = "Champion of Tzeentch";
+        monster.description = "Spell Caster: 2 random Chaos spells.";
+        this.monsters.Add(monster);
+        // Chaos Cultist
+        monster = new Monster();
+        monster.MovementSquares = 7;
+        monster.AttackDice = 3;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 2;
+        monster.MindPoints = 4;
+        monster.image = "ChaosCultist";
+        monster.name = "Chaos Cultist";
+        monster.description = "Spell Caster: Chaos spells 'Fear' and 'Animate Skeleton'.";
+        this.monsters.Add(monster);
+        // Chaos Doomguard
+        monster = new Monster();
+        monster.MovementSquares = 8;
+        monster.AttackDice = 4;
+        monster.DefendDice = 6;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 3;
+        monster.image = "ChaosDoomguard";
+        monster.name = "Chaos Doomguard";
+        monster.description = "Heavy Armor: when defending, each black shield cancels one extra skull. Long Weapon: can attack diagonally.";
+        this.monsters.Add(monster);
+        // Chaos Marauder 
+        monster = new Monster();
+        monster.MovementSquares = 9;
+        monster.AttackDice = 4;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 2;
+        monster.image = "ChaosMarauder ";
+        monster.name = "Chaos Marauder ";
+        monster.description = "Rage: +1 attack die and +1 movement for each Body Point lost.";
+        this.monsters.Add(monster);
+        // Chaos Warlock
+        monster = new Monster();
+        monster.MovementSquares = 8;
+        monster.AttackDice = 3;
+        monster.DefendDice = 4;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 6;
+        monster.image = "ChaosWarlock";
+        monster.name = "Chaos Warlock";
+        monster.description = "Spell Caster: 4 random Chaos spells.";
+        this.monsters.Add(monster);
+        // Chaos Warrior
+        monster = new Monster();
+        monster.MovementSquares = 7;
+        monster.AttackDice = 4;
+        monster.DefendDice = 4;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 3;
+        monster.image = "ChaosWarrior";
+        monster.name = "Chaos Warrior";
+        monster.description = "Heavy Armor: when defending, each black shield cancels one extra skull.";
+        this.monsters.Add(monster);
+        // Dark Mage
+        monster = new Monster();
+        monster.MovementSquares = 5;
+        monster.AttackDice = 4;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 6;
+        monster.image = "DarkMage";
+        monster.name = "Dark Mage";
+        monster.description = "Spell Caster: 3 random High Mage Spells.";
+        this.monsters.Add(monster);
+        // Death Knight
+        monster = new Monster();
+        monster.MovementSquares = 7;
+        monster.AttackDice = 4;
+        monster.DefendDice = 5;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 3;
+        monster.image = "DeathKnight";
+        monster.name = "Death Knight";
+        monster.description = "Captain: +1 movement to all undead monsters.";
+        this.monsters.Add(monster);
+        // Death Reaper
+        monster = new Monster();
+        monster.MovementSquares = 8;
+        monster.AttackDice = 3;
+        monster.DefendDice = 3;
+        monster.BodyPoints = 1;
+        monster.MindPoints = 0;
+        monster.image = "DeathReaper";
+        monster.name = "Death Reaper";
+        monster.description = "Soul Eater: when damages a hero, the hero also loses 1 mind point.";
+        this.monsters.Add(monster);
+        // Elementalist
+        monster = new Monster();
+        monster.MovementSquares = 6;
+        monster.AttackDice = 3;
+        monster.DefendDice = 4;
+        monster.BodyPoints = 3;
+        monster.MindPoints = 5;
+        monster.image = "Elementalist";
+        monster.name = "Elementalist";
+        monster.description = "Spell Caster: 3 random Storm Master Spells.";
+        this.monsters.Add(monster);
+
         // Fimir
         monster = new Monster();
         monster.MovementSquares = 6;
@@ -360,7 +504,7 @@ public class ZargonFeed : MonoBehaviourPun
         if (PhotonNetwork.IsMasterClient)
         {
             int nextMonster = selectedMonster + 1;
-            if (nextMonster == monsters.Count - 1) selectedMonster = 1;
+            if (nextMonster == monsters.Count - 1) nextMonster = 0;
             ShowMonster(nextMonster);
             photonView.RPC("ThreadShowMonster", RpcTarget.Others, selectedMonster);
         }
@@ -371,7 +515,7 @@ public class ZargonFeed : MonoBehaviourPun
         if (PhotonNetwork.IsMasterClient)
         {
             int nextMonster = selectedMonster - 1;
-            if (nextMonster < 0) selectedMonster = monsters.Count - 1;
+            if (nextMonster < 0) nextMonster = monsters.Count - 1;
             ShowMonster(nextMonster);
             photonView.RPC("ThreadShowMonster", RpcTarget.Others, selectedMonster);
         }
