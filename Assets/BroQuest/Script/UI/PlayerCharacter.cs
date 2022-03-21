@@ -260,6 +260,8 @@ public class PlayerCharacter : MonoBehaviourPun
         defendDice.text = "" + heroes[heroID].DefendDice;
         bodyPoints.text = "" + heroes[heroID].BodyPoints;
         mindPoints.text = "" + heroes[heroID].MindPoints;
+
+        PlayerFeed.instance.ShowPlayerCharacter();
     }
 
     public void NextHero()
