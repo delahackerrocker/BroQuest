@@ -9,6 +9,7 @@ public class UI_Root : MonoBehaviour
     public CanvasController actionBars;
     public CanvasController chatWindow;
     public CanvasController map;
+    public CanvasController tableTop;
     public GameObject diceArena3D;
     //public CanvasController rollLogWindow;
     //public CanvasController treasureDeckWindow;
@@ -39,6 +40,7 @@ public class UI_Root : MonoBehaviour
         HideAll();
         actionBars.TurnOnCanvas();
         map.TurnOnCanvas();
+        tableTop.TurnOnCanvas();
     }
 
     public void DiceUI()
@@ -69,6 +71,7 @@ public class UI_Root : MonoBehaviour
         actionBars.TurnOffCanvas();
         chatWindow.TurnOffCanvas();
         map.TurnOffCanvas();
+        tableTop.TurnOffCanvas();
         diceArena3D.SetActive(false);
     }
 }
