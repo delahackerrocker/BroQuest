@@ -491,7 +491,10 @@ MonoBehaviour:
   ySquares: 19
   squareSize: 56.65
   padding: 0
-  items: []
+  items:
+  - {fileID: 7646766023468749764}
+  - {fileID: 7646766024049187061}
+  - {fileID: 7646766025089431863}
   representableItems: []
   square: {fileID: 3610862197092894801, guid: 830b52a0be6a60742b20b949978ec1e8, type: 3}
   statsText: {fileID: 7646766024048917551}
@@ -1839,7 +1842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.9250001, y: 0.97}
-  m_AnchoredPosition: {x: 2.597, y: 7.053589}
+  m_AnchoredPosition: {x: 2.597, y: 7.0528364}
   m_SizeDelta: {x: 3.143, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7646766024048917551
@@ -2590,7 +2593,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7646766024124753099}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.999202
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
