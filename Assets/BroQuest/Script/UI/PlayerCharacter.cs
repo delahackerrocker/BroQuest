@@ -285,11 +285,11 @@ public class PlayerCharacter : MonoBehaviourPun
         if (panelIsOpen)
         {
             panelIsOpen = false;
-            playerCharacterPanel.transform.localPosition = new Vector3(0f,878f,0f);
+            playerCharacterPanel.transform.localPosition = new Vector3(664f, -932f,0f);
         } else
         {
             panelIsOpen = true;
-            playerCharacterPanel.transform.localPosition = new Vector3(0f, 150f, 0f);
+            playerCharacterPanel.transform.localPosition = new Vector3(664f, -201f, 0f);
         }
         EventSystem.current.SetSelectedGameObject(null);
     }

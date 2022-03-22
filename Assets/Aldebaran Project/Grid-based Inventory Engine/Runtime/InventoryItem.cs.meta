@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5e7b9cccdb451a0408078d381ad6464b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - itemHighlightPrefab: {fileID: 314582171578895570, guid: e969ea87cbcfb514cb58c3d7144ff29e, type: 3}
+  - itemHighlight: {fileID: 314582171578895570, guid: e969ea87cbcfb514cb58c3d7144ff29e, type: 3}
+  - representedItem: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

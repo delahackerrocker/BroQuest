@@ -1,0 +1,21 @@
+{
+  "name": "com.aldebaranproject.gridbasedinventoryengine",
+  "displayName": "Grid-based Inventory Engine",
+  "version": "1.0.0",
+  "unity": "2018.4",
+  "description": "Grid-based and extendable inventory system with simulated item size, integrated JSON deserialization with customizable item details, item description window, and the ability to add or remove items from the inventory easily.",
+  "keywords": [
+    "inventory",
+    "grid",
+    "rpg",
+    "grid",
+    "grid-based",
+    "survival inventory",
+    "dayz inventory"
+  ],
+  "author": {
+    "name": "Aldebaran Project",
+    "email": "aldebaranprojectdev@gmail.com"
+  },
+  "type": "tool"
+}
