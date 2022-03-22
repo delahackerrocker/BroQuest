@@ -10,9 +10,9 @@ public class Inventory : MonoBehaviour
     [SerializeField, Tooltip("Number of squares in y axis.")]
     int ySquares = 1;
     [Tooltip("Square size.")]
-    public int squareSize = 25;
+    public float squareSize = 25;
     [Tooltip("Padding size around squares grid.")]
-    public int padding = 15;
+    public float padding = 15;
 
     [Space(20)]
     [Header("References (no need to modify these manually, add your items through AddItem())")]
@@ -44,14 +44,14 @@ public class Inventory : MonoBehaviour
             ySquares = value;
         }
     }
-    public int SquareSize
+    public float SquareSize
     {
         get { return this.squareSize; }
         set {
             squareSize = value;
         }
     }
-    public int Padding
+    public float Padding
     {
         get { return this.padding; }
         set {
