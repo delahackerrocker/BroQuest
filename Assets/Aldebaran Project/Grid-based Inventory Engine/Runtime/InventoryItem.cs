@@ -241,6 +241,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             Input.mousePosition, canvas.worldCamera,
             out Vector2 movePos);
 
+        // Offset for how the selected item hovers under the mouse
         Vector3 offset = new Vector3(-rect.sizeDelta.x * canvas.scaleFactor, rect.sizeDelta.y * canvas.scaleFactor, 0.0f) / 2.0f;
         transform.position = canvas.transform.TransformPoint(movePos) + offset;
         rect.anchoredPosition += new Vector2(rect.sizeDelta.x / 2.0f, -rect.sizeDelta.y / 2.0f);
@@ -276,7 +277,16 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (Input.GetKeyDown(KeyCode.R))
         {
             Rotate();
+        } else if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Remove();
         }
+    }
+
+    public void Remove()
+    {
+        Destroy(itemHighlight);
+        inventory.RemoveItem(this);
     }
 
     public void Rotate()

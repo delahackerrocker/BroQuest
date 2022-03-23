@@ -32,7 +32,7 @@
 			"weight": 1,
 			"width": 1,
 			"height": 1,
-			"description": "<color=\\\"red\\\">Trap <color=\\\"white\\\">Boulder\"",
+			"description": "<color=\"red\">Trap <color=\"white\">Boulder",
 			"prefabPath": "Sample Prefabs/ring",
 			"spritePath": "Maps/Traps/Trap_Boulder"
 		},
@@ -68,7 +68,7 @@
 			"weight": 1,
 			"width": 1,
 			"height": 1,
-			"description": "<color=\\\"red\\\">Trap <color=\\\"white\\\">Pit\"",
+			"description": "<color=\"red\">Trap <color=\"white\">Pit",
 			"prefabPath": "Sample Prefabs/ring",
 			"spritePath": "Maps/Traps/Trap_Pit"
 		},
@@ -104,7 +104,7 @@
 			"weight": 1,
 			"width": 2,
 			"height": 1,
-			"description": "<color=\\\"green\\\">Door <color=\\\"white\\\">Closed\"",
+			"description": "<color=\"green\">Door <color=\"white\">Closed",
 			"prefabPath": "Sample Prefabs/ring",
 			"spritePath": "Maps/Doors/LargeDoor_Closed"
 		},
@@ -116,7 +116,7 @@
 			"weight": 1,
 			"width": 2,
 			"height": 1,
-			"description": "<color=\\\"green\\\">Door <color=\\\"white\\\">Open\"",
+			"description": "<color=\"green\">Door <color=\"white\">Open",
 			"prefabPath": "Sample Prefabs/ring",
 			"spritePath": "Maps/Doors/LargeDoor_Open"
 		}

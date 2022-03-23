@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -88,6 +89,7 @@ public class Inventory : MonoBehaviour
     /// </summary>
     public void UpdateInventory()
     {
+        Debug.Log("Inventory::UpdateInventory");
         RectTransform myRect = GetComponent<RectTransform>();
         myRect.sizeDelta = new Vector2(xSquares * squareSize + padding, ySquares * squareSize + padding);
 
@@ -142,6 +144,7 @@ public class Inventory : MonoBehaviour
 
     public void SelectItem(Item item)
     {
+        Debug.Log("Inventory::SelectItem");
         this.selectedItem = item;
         UpdateStatsText();
     }
@@ -149,6 +152,7 @@ public class Inventory : MonoBehaviour
 
     void UpdateStatsText()
     {
+        Debug.Log("Inventory::UpdateStatsText");
         if (selectedItem == null)
         {
             statsText.SetText("");
@@ -158,7 +162,7 @@ public class Inventory : MonoBehaviour
             statsText.SetText("<alpha=#aa>Name: <alpha=#ff>" + selectedItem.name + "\n" +
                 "<alpha=#aa>Weight: <alpha=#ff>{0}\n" +
                 "<alpha=#aa>Type:  <alpha=#ff>" + selectedItem.type+"\n" +
-                "<alpha=#aa>—————————————————————\n" + selectedItem.description,
+                "<alpha=#aa>———————————————\n" + selectedItem.description,
                 selectedItem.weight);
         }
     }
@@ -171,6 +175,7 @@ public class Inventory : MonoBehaviour
     /// <returns></returns>
     public bool CheckInsideBounds(int positionx, int positiony, int width = 1, int height = 1)
     {
+        Debug.Log("Inventory::CheckInsideBounds");
         Vector2Int topleft = new Vector2Int(positionx, positiony);
         Vector2Int bottomRight = new Vector2Int(positionx + width, positiony + height);
         bool topLeftInBounds = topleft.x >= 0 && topleft.y >= 0;
@@ -180,6 +185,7 @@ public class Inventory : MonoBehaviour
 
     public bool CheckCollisions(GameObject checkingItem, int checkPositionx, int checkPositiony, int width, int height)
     {
+        Debug.Log("Inventory::CheckCollisions");
         foreach (GameObject item in items)
         {
             if (item != checkingItem)
@@ -204,6 +210,7 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(InventoryItem item)
     {
+        Debug.Log("Inventory::RemoveItem");
         if (items.Contains(item.gameObject))
         {
             items.Remove(item.gameObject);
@@ -213,6 +220,7 @@ public class Inventory : MonoBehaviour
 
     public void DropItem(InventoryItem item)
     {
+        Debug.Log("Inventory::DropItem");
         if (item.representedItem)
         {
             Vector2 aroundPlayerVector = new Vector2(UnityEngine.Random.Range(0.01f, 1.0f), UnityEngine.Random.Range(0.01f, 1.0f)).normalized;
@@ -230,6 +238,7 @@ public class Inventory : MonoBehaviour
 
     public bool GrabbingItem()
     {
+        Debug.Log("Inventory::GrabbingItem");
         return grabbedItem != null;
     }
 
@@ -239,6 +248,7 @@ public class Inventory : MonoBehaviour
     /// <returns></returns>
     Vector2Int FindItemPlacement(GameObject itemObj)
     {
+        Debug.Log("Inventory::FindItemPlacement");
         InventoryItem item = itemObj.GetComponent<InventoryItem>();
         int maxxCheck = xSquares - item.width + 1;
         int maxyCheck = ySquares - item.height + 1;
@@ -265,6 +275,7 @@ public class Inventory : MonoBehaviour
     /// <returns>Desired item numerical ID in JSON.</returns>
     public InventoryItem AddItem(int id_i)
     {
+        Debug.Log("Inventory::AddItem");
         GameObject itemObj = Instantiate(itemPrefab, transform);
         InventoryItem item = itemObj.GetComponent<InventoryItem>();
         item.InitializeItem(id_i);
