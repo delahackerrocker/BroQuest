@@ -42,6 +42,7 @@ public class RollManager : MonoBehaviourPunCallbacks, ILobbyCallbacks
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         diceCamera = GameObject.FindGameObjectWithTag("Dice_Camera").GetComponent<Camera>() as Camera;
         UpdateDiceSets();
     }

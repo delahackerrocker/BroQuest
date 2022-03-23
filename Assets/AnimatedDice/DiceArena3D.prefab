@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 2344226074218355375}
   m_Layer: 7
   m_Name: DiceArena3D
-  m_TagString: Game_Camera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7287,7 +7287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6277675297428041332}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -7, y: 48.23, z: 15.92}
+  m_LocalPosition: {x: -7, y: 47.19, z: 15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

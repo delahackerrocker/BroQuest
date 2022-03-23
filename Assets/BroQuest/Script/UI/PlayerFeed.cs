@@ -31,22 +31,32 @@ public class PlayerFeed : MonoBehaviourPun
     void Start()
     {
         ThreadPlayerClear(PhotonNetwork.NickName);
+        ClosePanel();
     }
 
-    public bool panelIsOpen = true;
+    public bool panelIsOpen = false;
     public void TogglePanel()
     {
         if (panelIsOpen)
         {
-            panelIsOpen = false;
-            playerFeedPanel.transform.localPosition = new Vector3(1133f, 0f, 0f);
+            ClosePanel();
         }
         else
         {
-            panelIsOpen = true;
-            playerFeedPanel.transform.localPosition = new Vector3(735f, 0f, 0f);
+            OpenPanel();
         }
         EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void OpenPanel()
+    {
+        panelIsOpen = true;
+        playerFeedPanel.transform.localPosition = new Vector3(735f, 0f, 0f);
+    }
+    public void ClosePanel()
+    {
+        panelIsOpen = false;
+        playerFeedPanel.transform.localPosition = new Vector3(1133f, 0f, 0f);
     }
 
     public void OnUpdateFeed(string[,] newRolls)

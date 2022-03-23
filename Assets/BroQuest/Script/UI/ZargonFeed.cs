@@ -44,15 +44,24 @@ public class ZargonFeed : MonoBehaviourPun
     {
         if (panelIsOpen)
         {
-            panelIsOpen = false;
-            zargonFeedPanel.transform.localPosition = new Vector3(-1137f, 0f, 0f);
+            ClosePanel();
         }
         else
         {
-            panelIsOpen = true;
-            zargonFeedPanel.transform.localPosition = new Vector3(-735f, 0f, 0f);
+            OpenPanel();
         }
         EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void OpenPanel()
+    {
+        panelIsOpen = true;
+        zargonFeedPanel.transform.localPosition = new Vector3(-735f, 0f, 0f);
+    }
+    public void ClosePanel()
+    {
+        panelIsOpen = false;
+        zargonFeedPanel.transform.localPosition = new Vector3(-1137f, 0f, 0f);
     }
 
     private void SetupMonsterList()

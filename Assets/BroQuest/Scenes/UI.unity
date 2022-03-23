@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.4471948, g: 0.49711514, b: 0.57516205, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6837025923233472342, guid: 330a66b842e2d8448b7ea5ffc44de9bb, type: 3}
       propertyPath: sceneViewId
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330a66b842e2d8448b7ea5ffc44de9bb, type: 3}
@@ -1402,7 +1402,7 @@ Canvas:
   m_GameObject: {fileID: 197760345}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -1549,9 +1549,8 @@ Transform:
   - {fileID: 1005038394}
   - {fileID: 642430276}
   - {fileID: 1307040887}
-  - {fileID: 1641527491}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &222018142
 MonoBehaviour:
@@ -1571,7 +1570,7 @@ MonoBehaviour:
   chatWindow: {fileID: 1307040889}
   map: {fileID: 7978882546117625586}
   tableTop: {fileID: 593064006}
-  diceArena3D: {fileID: 816369762}
+  diceArena3D: {fileID: 549472546}
 --- !u!114 &222018143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4162,6 +4161,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1671694430895352416, guid: 60b85aea196d6324fb1c3627060e65b8, type: 3}
   m_PrefabInstance: {fileID: 524797337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &549472546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6277675297428041332, guid: 283ac7140714235469f99c19465355f6, type: 3}
+  m_PrefabInstance: {fileID: 1794943338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &559636457
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4816,7 @@ Canvas:
   m_GameObject: {fileID: 593064001}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5229,7 +5233,7 @@ Canvas:
   m_GameObject: {fileID: 642430275}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -5695,11 +5699,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766477143}
   m_CullTransparentMesh: 1
---- !u!1 &816369762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 868762832491892477, guid: 283ac7140714235469f99c19465355f6, type: 3}
-  m_PrefabInstance: {fileID: 1794943338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &818549396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,7 +5782,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 766477145}
   m_HandleRect: {fileID: 766477144}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6592,7 +6591,7 @@ Canvas:
   m_GameObject: {fileID: 1005038393}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -6658,7 +6657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1030381593
 Camera:
   m_ObjectHideFlags: 0
@@ -7333,9 +7332,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222018143}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnBackBTN
+      - m_Target: {fileID: 222018142}
+        m_TargetAssemblyTypeName: UI_Root, Assembly-CSharp
+        m_MethodName: GameUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9283,7 +9282,7 @@ Canvas:
   m_GameObject: {fileID: 1307040886}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -10987,8 +10986,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122215879}
   m_HandleRect: {fileID: 122215878}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11772,11 +11771,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618502434}
   m_CullTransparentMesh: 1
---- !u!4 &1641527491 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7876075385330070367, guid: 283ac7140714235469f99c19465355f6, type: 3}
-  m_PrefabInstance: {fileID: 1794943338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641990269
 GameObject:
   m_ObjectHideFlags: 0
@@ -13072,8 +13066,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113042397}
   m_HandleRect: {fileID: 2113042396}
   m_Direction: 2
-  m_Value: 0.99999565
-  m_Size: 0.98
+  m_Value: 1.0000044
+  m_Size: 0.9799999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13197,27 +13191,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 222018141}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 592219820098637940, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: sceneViewId
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 868762832491892477, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: m_Name
       value: DiceArena3D
       objectReference: {fileID: 0}
-    - target: {fileID: 868762832491892477, guid: 283ac7140714235469f99c19465355f6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2919228425466626097, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: sceneViewId
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7876075385330070367, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7876075385330070367, guid: 283ac7140714235469f99c19465355f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15571,7 +15561,7 @@ Canvas:
   m_GameObject: {fileID: 2125677467}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -16885,7 +16875,7 @@ Canvas:
   m_GameObject: {fileID: 7978882546117625579}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1030381593}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
