@@ -37,6 +37,7 @@ public class ZargonFeed : MonoBehaviourPun
     {
         ThreadZargonClear();
         SetupMonsterList();
+        ClosePanel();
     }
 
     public bool panelIsOpen = true;
