@@ -30,7 +30,7 @@ public class PlayerCharacter : MonoBehaviourPun
     void Start()
     {
         SetupHeroList();
-        TogglePanel();
+        playerCharacterPanel.GetComponent<Panel>().ClosePanel();
     }
 
     private void SetupHeroList()
@@ -276,21 +276,5 @@ public class PlayerCharacter : MonoBehaviourPun
         int nextMonster = selectedHero - 1;
         if (nextMonster < 0) nextMonster = heroes.Count - 1;
         ShowHero(nextMonster);
-    }
-
-
-    public bool panelIsOpen = true;
-    public void TogglePanel()
-    {
-        if (panelIsOpen)
-        {
-            panelIsOpen = false;
-            playerCharacterPanel.transform.localPosition = new Vector3(664f, -932f,0f);
-        } else
-        {
-            panelIsOpen = true;
-            playerCharacterPanel.transform.localPosition = new Vector3(664f, -201f, 0f);
-        }
-        EventSystem.current.SetSelectedGameObject(null);
     }
 }

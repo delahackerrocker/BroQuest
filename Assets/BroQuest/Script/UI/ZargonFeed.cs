@@ -37,32 +37,7 @@ public class ZargonFeed : MonoBehaviourPun
     {
         ThreadZargonClear();
         SetupMonsterList();
-        ClosePanel();
-    }
-
-    public bool panelIsOpen = true;
-    public void TogglePanel()
-    {
-        if (panelIsOpen)
-        {
-            ClosePanel();
-        }
-        else
-        {
-            OpenPanel();
-        }
-        EventSystem.current.SetSelectedGameObject(null);
-    }
-
-    public void OpenPanel()
-    {
-        panelIsOpen = true;
-        zargonFeedPanel.transform.localPosition = new Vector3(-735f, 0f, 0f);
-    }
-    public void ClosePanel()
-    {
-        panelIsOpen = false;
-        zargonFeedPanel.transform.localPosition = new Vector3(-1137f, 0f, 0f);
+        zargonFeedPanel.GetComponent<Panel>().ClosePanel();
     }
 
     private void SetupMonsterList()
@@ -569,7 +544,7 @@ public class ZargonFeed : MonoBehaviourPun
 
                 //UpdateDiceRollLog(PhotonNetwork.LocalPlayer.NickName, i, newRolls[i, 0], newRolls[i, 1]);
             }
-            photonView.RPC("ThreadShowMonster", RpcTarget.Others, selectedMonster);
+            photonView.RPC("ThreadShowMonster", RpcTarget.All, selectedMonster);
         }
         EventSystem.current.SetSelectedGameObject(null);
     }
@@ -578,6 +553,7 @@ public class ZargonFeed : MonoBehaviourPun
     void ThreadShowMonster(int monsterID)
     {
         ShowMonster(monsterID);
+        zargonFeedPanel.GetComponent<Panel>().OpenPanel();
     }
 
     [PunRPC]
