@@ -256,7 +256,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6006335821562395380}
   m_HandleRect: {fileID: 6006335821562395379}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -384,8 +384,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerFeed, Assembly-CSharp
+      - m_Target: {fileID: 928502700}
+        m_TargetAssemblyTypeName: Panel, Assembly-CSharp
         m_MethodName: TogglePanel
         m_Mode: 1
         m_Arguments:
@@ -743,8 +743,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6006335821666959999}
   m_HandleRect: {fileID: 6006335821666959998}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.9999999
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1718,8 +1718,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerCharacter, Assembly-CSharp
+      - m_Target: {fileID: 375107331}
+        m_TargetAssemblyTypeName: Panel, Assembly-CSharp
         m_MethodName: TogglePanel
         m_Mode: 1
         m_Arguments:
@@ -2039,7 +2039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 254.50008, y: -517}
+  m_AnchoredPosition: {x: 549, y: -517}
   m_SizeDelta: {x: 280, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6006335820585479914
@@ -3270,8 +3270,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6006335820767914085}
   m_HandleRect: {fileID: 6006335820767914084}
   m_Direction: 2
-  m_Value: 1.0000044
-  m_Size: 0.9799999
+  m_Value: 1.0000261
+  m_Size: 0.9800001
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3453,7 +3453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000009536743, y: -0.00014703798}
   m_SizeDelta: {x: 0, y: 350}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6006335821013055130
@@ -4289,7 +4289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.499935, y: -517}
+  m_AnchoredPosition: {x: -274, y: -517}
   m_SizeDelta: {x: 280, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6006335821191004068
@@ -4782,7 +4782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -321.49994, y: -517}
+  m_AnchoredPosition: {x: -1119, y: -662}
   m_SizeDelta: {x: 280, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6006335821335930290
@@ -5447,8 +5447,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ZargonFeed, Assembly-CSharp
+      - m_Target: {fileID: 1037217461}
+        m_TargetAssemblyTypeName: Panel, Assembly-CSharp
         m_MethodName: TogglePanel
         m_Mode: 1
         m_Arguments:
@@ -5578,6 +5578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6006335821416411322}
+  - component: {fileID: 375107331}
   m_Layer: 5
   m_Name: PlayerCharacterPanel
   m_TagString: Untagged
@@ -5605,9 +5606,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 636, y: -933.5}
+  m_AnchoredPosition: {x: 133, y: -933}
   m_SizeDelta: {x: 450, y: 780}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &375107331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006335821416411321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5b190b8c608942a726c0e663822cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closePosition: {x: 133, y: -933, z: 0}
+  openPosition: {x: 133, y: -201, z: 0}
+  panelIsOpen: 0
 --- !u!1 &6006335821425865524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6515,7 +6531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.00015258789}
   m_SizeDelta: {x: 0, y: 294.72}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6006335821632007578
@@ -7213,6 +7229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6006335821843771660}
+  - component: {fileID: 1037217461}
   m_Layer: 5
   m_Name: ZargonActionsPanel
   m_TagString: Untagged
@@ -7239,9 +7256,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -735, y: 0}
+  m_AnchoredPosition: {x: -1138, y: 0}
   m_SizeDelta: {x: 450, y: 1079}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1037217461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006335821843771659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5b190b8c608942a726c0e663822cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closePosition: {x: -1137, y: 0, z: 0}
+  openPosition: {x: -735, y: 0, z: 0}
+  panelIsOpen: 1
 --- !u!1 &6006335821846837825
 GameObject:
   m_ObjectHideFlags: 0
@@ -7589,6 +7621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6006335821936249875}
+  - component: {fileID: 928502700}
   m_Layer: 5
   m_Name: PlayerActionsPanel
   m_TagString: Untagged
@@ -7618,6 +7651,21 @@ RectTransform:
   m_AnchoredPosition: {x: 1132, y: 0}
   m_SizeDelta: {x: 450, y: 1081}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &928502700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006335821936249874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5b190b8c608942a726c0e663822cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closePosition: {x: 1133, y: 0, z: 0}
+  openPosition: {x: 735, y: 0, z: 0}
+  panelIsOpen: 0
 --- !u!1 &6006335821956772049
 GameObject:
   m_ObjectHideFlags: 0
