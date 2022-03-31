@@ -1,0 +1,148 @@
+{
+	"items": [
+		{
+			"id_i": 0,
+			"id_s": "Trap_Bear",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Bear",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Bear",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Bear"
+		},
+		{
+			"id_i": 1,
+			"id_s": "Trap_Boulder",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Boulder",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Boulder",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Boulder"
+		},
+		{
+			"id_i": 2,
+			"id_s": "Trap_Explosion",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Explosion",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Explosion",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Explosion"
+		},
+		{
+			"id_i": 3,
+			"id_s": "Trap_Gas",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Gas",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Gas",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Gas"
+		},
+		{
+			"id_i": 4,
+			"id_s": "Trap_Hole",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Hole",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Hole",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Hole"
+		},
+		{
+			"id_i": 5,
+			"id_s": "Trap_Monster",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Monster",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Monster",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Monster"
+		},
+		{
+			"id_i": 6,
+			"id_s": "Trap_Pit",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Pit",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Pit",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Pit"
+		},
+		{
+			"id_i": 7,
+			"id_s": "Trap_Rock",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Rock",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Rock",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Rock"
+		},
+		{
+			"id_i": 8,
+			"id_s": "Trap_Saw",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Saw",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Saw",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Saw"
+		},
+		{
+			"id_i": 9,
+			"id_s": "Trap_Spear",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Spear",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Spear",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Spear"
+		},
+		{
+			"id_i": 10,
+			"id_s": "Trap_SpikePit",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Spike Pit",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Spike Pit",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_SpikePit"
+		},
+		{
+			"id_i": 11,
+			"id_s": "Trap_Tornado",
+			"type": "Trap",
+			"name": "<color=\"red\">Trap <color=\"white\">Tornado",
+			"weight": 1,
+			"width": 1,
+			"height": 1,
+			"description": "<color=\"red\">Trap <color=\"white\">Tornado",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Traps/Trap_Tornado"
+		}
+	]
+}

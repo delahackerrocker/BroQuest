@@ -1,0 +1,64 @@
+{
+	"items": [
+		{
+			"id_i": 12,
+			"id_s": "HeavyDoor_Closed",
+			"type": "Door",
+			"name": "<color=\"white\">Heavy <color=\"green\">Door <color=\"white\">Closed",
+			"weight": 1,
+			"width": 2,
+			"height": 1,
+			"description": "<color=\"white\">Heavy <color=\"green\">Door <color=\"white\">Closed",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Doors/HeavyDoor_Closed"
+		},
+		{
+			"id_i": 13,
+			"id_s": "LargeDoor_Closed",
+			"type": "Door",
+			"name": "<color=\"green\">Door <color=\"white\">Closed",
+			"weight": 1,
+			"width": 2,
+			"height": 1,
+			"description": "<color=\"green\">Door <color=\"white\">Closed",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Doors/LargeDoor_Closed"
+		},
+		{
+			"id_i": 14,
+			"id_s": "LargeDoor_Open",
+			"type": "Door",
+			"name": "<color=\"green\">Door <color=\"white\">Open",
+			"weight": 1,
+			"width": 2,
+			"height": 1,
+			"description": "<color=\"green\">Door <color=\"white\">Open",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Doors/LargeDoor_Open"
+		},
+		{
+			"id_i": 15,
+			"id_s": "SmallDoor_Ajar",
+			"type": "Door",
+			"name": "<color=\"white\">Small <color=\"green\">Door <color=\"white\">Ajar",
+			"weight": 1,
+			"width": 2,
+			"height": 1,
+			"description": "<color=\"white\">Small <color=\"green\">Door <color=\"white\">Ajar",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Doors/SmallDoor_Ajar"
+		},
+		{
+			"id_i": 16,
+			"id_s": "SmallDoor_Open",
+			"type": "Door",
+			"name": "<color=\"white\">Small <color=\"green\">Door <color=\"white\">Open",
+			"weight": 1,
+			"width": 2,
+			"height": 1,
+			"description": "<color=\"white\">Small <color=\"green\">Door <color=\"white\">Open",
+			"prefabPath": "Sample Prefabs/ring",
+			"spritePath": "Maps/Doors/SmallDoor_Open"
+		}
+	]
+}

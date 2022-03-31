@@ -76,7 +76,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
         width = m_item.width;
         height = m_item.height;
-        ItemList.types.TryGetValue(m_item.type, out sortPriority);
+        //ItemList.types.TryGetValue(m_item.type, out sortPriority);
 
         Texture2D texture = Resources.Load<Texture2D>(m_item.spritePath);
         Sprite sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
